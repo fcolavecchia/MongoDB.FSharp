@@ -10,12 +10,7 @@ Installation
 Note also that this requires at least version 1.8.1 of the official MongoDB driver. That
 version includes some API that makes this whole project possible.
 
-Install NuGet and run this from the Package Manager Console. The F# driver builds on top of 
-the officiel C# driver so first you need to install the C# driver
-
-    PM> Install-Package mongocsharpdriver
-
-and then you install the F# driver
+Install NuGet and run this from the Package Manager Console. 
 
     PM> Install-Package MongoDB.FSharp
 
@@ -42,15 +37,14 @@ type Person = { Id : BsonObjectId; Name : string; Scores : int list }
 
 let connectionString = "mongodb://localhost"
 let client = new MongoClient(connectionString)
-let server = client.GetServer();
-let db = server.GetDatabase("test")
+let db = client.GetDatabase("test")
 
 let collection = db.GetCollection<Person> "people"
 
 let id = BsonObjectId(ObjectId.GenerateNewId())
-collection.Insert { Id = id; Name = "George"; Scores = [13; 52; 6] }
+do! insertOne collection { Id = id; Name = "George"; Scores = [13; 52; 6] }
 
-let george = collection.FindOne(Query.EQ("_id", id))
+let! george = findOneById collection id
 ```
 
 The example above would work naturally in C#, but remember that record
