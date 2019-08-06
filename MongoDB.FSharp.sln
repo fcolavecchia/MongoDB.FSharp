@@ -1,42 +1,62 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1207C2F4-D695-48D4-A0D1-9258EC678E22}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-	EndProjectSection
-EndProject
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C400BE02-457C-4C0D-BEE1-874EC44EAA22}"
 	ProjectSection(SolutionItems) = preProject
 		License.txt = License.txt
-		MongoDB.FSharp.nuspec = MongoDB.FSharp.nuspec
-		package.ps1 = package.ps1
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MongoDB.FSharp", "MongoDB.FSharp\MongoDB.FSharp.fsproj", "{80694398-03AF-45BD-8DCB-C5ED13799DB4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C397A34C-84F1-49E7-AEBC-2F9F2B196216}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MongoDB.FSharp.Tests", "MongoDB.FSharp.Tests\MongoDB.FSharp.Tests.fsproj", "{DE725DAC-C637-4DA7-A30D-69061D33D1B2}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MongoDB.FSharp", "src\MongoDB.FSharp\MongoDB.FSharp.fsproj", "{80694398-03AF-45BD-8DCB-C5ED13799DB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ACBEE43C-7A88-4FB1-9B06-DB064D22B29F}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MongoDB.FSharp.Tests", "tests\MongoDB.FSharp.Tests\MongoDB.FSharp.Tests.fsproj", "{DE725DAC-C637-4DA7-A30D-69061D33D1B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{80694398-03AF-45BD-8DCB-C5ED13799DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{80694398-03AF-45BD-8DCB-C5ED13799DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80694398-03AF-45BD-8DCB-C5ED13799DB4}.Debug|x64.ActiveCfg = Debug|x64
+		{80694398-03AF-45BD-8DCB-C5ED13799DB4}.Debug|x64.Build.0 = Debug|x64
+		{80694398-03AF-45BD-8DCB-C5ED13799DB4}.Debug|x86.ActiveCfg = Debug|x86
+		{80694398-03AF-45BD-8DCB-C5ED13799DB4}.Debug|x86.Build.0 = Debug|x86
 		{80694398-03AF-45BD-8DCB-C5ED13799DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80694398-03AF-45BD-8DCB-C5ED13799DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80694398-03AF-45BD-8DCB-C5ED13799DB4}.Release|x64.ActiveCfg = Release|x64
+		{80694398-03AF-45BD-8DCB-C5ED13799DB4}.Release|x64.Build.0 = Release|x64
+		{80694398-03AF-45BD-8DCB-C5ED13799DB4}.Release|x86.ActiveCfg = Release|x86
+		{80694398-03AF-45BD-8DCB-C5ED13799DB4}.Release|x86.Build.0 = Release|x86
 		{DE725DAC-C637-4DA7-A30D-69061D33D1B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DE725DAC-C637-4DA7-A30D-69061D33D1B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE725DAC-C637-4DA7-A30D-69061D33D1B2}.Debug|x64.ActiveCfg = Debug|x64
+		{DE725DAC-C637-4DA7-A30D-69061D33D1B2}.Debug|x64.Build.0 = Debug|x64
+		{DE725DAC-C637-4DA7-A30D-69061D33D1B2}.Debug|x86.ActiveCfg = Debug|x86
+		{DE725DAC-C637-4DA7-A30D-69061D33D1B2}.Debug|x86.Build.0 = Debug|x86
 		{DE725DAC-C637-4DA7-A30D-69061D33D1B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE725DAC-C637-4DA7-A30D-69061D33D1B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE725DAC-C637-4DA7-A30D-69061D33D1B2}.Release|x64.ActiveCfg = Release|x64
+		{DE725DAC-C637-4DA7-A30D-69061D33D1B2}.Release|x64.Build.0 = Release|x64
+		{DE725DAC-C637-4DA7-A30D-69061D33D1B2}.Release|x86.ActiveCfg = Release|x86
+		{DE725DAC-C637-4DA7-A30D-69061D33D1B2}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+	GlobalSection(NestedProjects) = preSolution
+		{80694398-03AF-45BD-8DCB-C5ED13799DB4} = {C397A34C-84F1-49E7-AEBC-2F9F2B196216}
+		{DE725DAC-C637-4DA7-A30D-69061D33D1B2} = {ACBEE43C-7A88-4FB1-9B06-DB064D22B29F}
 	EndGlobalSection
 EndGlobal

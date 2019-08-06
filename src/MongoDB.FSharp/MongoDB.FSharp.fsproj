@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageId>MongoDB.FSharp</PackageId>
+    <Title>MongoDB.FSharp</Title>
+    <Description>Silent utilities to make the official MongoDB driver feel natural to work with in F#</Description>
+    <Authors>Tim Kellogg; Robin Munn</Authors>
+    <Owners>Tim Kellogg</Owners>
+    <Copyright>Copyright 2013</Copyright>
+    <PackageTags>f#;fsharp;mongodB;nosql;utility</PackageTags>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/rmunn/MongoDB.FSharp</RepositoryUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <Optimize>true</Optimize>
+    <Tailcalls>true</Tailcalls>
+    
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
+    <!-- <Compile Include="SerializationOptions.fs" /> -->
+    <Compile Include="Serializers.fs" />
+  </ItemGroup>
+  <!-- <Import Project="..\..\fsc.props" /> -->
+  <Import Project="..\..\netfx.props" />
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>
